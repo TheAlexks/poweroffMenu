@@ -1,8 +1,11 @@
 from rich.console import Console
 import os
+import typer
 
+app = typer.Typer()
 console = Console()
 
+@app.command()
 def shutdown():
     try:
         console.print("Shutting down the machine...", style="magenta")
@@ -10,6 +13,7 @@ def shutdown():
     except:
         console.print("There was an error..", style="bold red")
 
+@app.command()
 def reboot():
     try:
         console.print("Rebooting the system..", style="magenta")
@@ -17,6 +21,7 @@ def reboot():
     except:
         console.print("There was an error..", style="bold red")
 
+@app.command()
 def suspend():
     try:
         console.print("Suspending the system..", style="magenta")
@@ -24,20 +29,12 @@ def suspend():
     except:
         console.print("There was an error..", style="bold red")
 
-def menu():
+@app.command()
+def help():
     console.print("[red]1. Shutdown[/]")
     console.print("[blue]2. Reboot[/]")
     print("3. Suspend\n")
 
-    op = int(input("Choose an option: "))
 
-    if op == 1:
-        shutdown()
-    elif op == 2:
-        reboot()
-    elif op == 3:
-        suspend()
-    else:
-        console.print("Invalid option.", style="bold red")
-
-menu()
+if __name__ == "__main__":
+    app()
