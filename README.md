@@ -5,9 +5,6 @@ If so, I present to you "poweroffMenu".
 
 I think the name explains its purpose.
 
-There's not a lot of magic going on.
-
-
 
 
 **How to install it?** 
