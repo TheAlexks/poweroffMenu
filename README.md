@@ -13,6 +13,8 @@ I think the name explains its purpose.
 Just clone the repo and run it with python3.
 Easy as that.
 
+Module rich is required.
+
 
 **NOTE:**
 This only works on Linux systems that use systemd as its init system.
