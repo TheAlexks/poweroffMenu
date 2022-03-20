@@ -13,7 +13,7 @@ I think the name explains its purpose.
 Just clone the repo and run it with python3.
 Easy as that.
 
-Module rich is required.
+Modules rich and typer are required.
 
 
 **NOTE:**
